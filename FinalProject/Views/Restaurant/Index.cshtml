@@ -1,0 +1,21 @@
+﻿@model List<FinalProject.Models.Restaurant>
+
+<h1>Vegetarian Restaurants</h1>
+
+@if (Model.Count == 0)
+{
+    <p>No vegetarian restaurants!</p>
+}
+else
+{
+    <div>
+        <ul>
+            @foreach (Restaurant restaurant in Model)
+            {
+                <li>
+                    <a asp-controller="Restaurant" asp-action="About" asp-route-id="@restaurant.Id">@restaurant.Name</a>
+                </li>
+            }
+        </ul>
+    </div>
+}

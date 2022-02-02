@@ -1,0 +1,18 @@
+﻿@model FinalProject.ViewModels.AddRestaurantViewModel;
+<h1>Add New Employer</h1>
+
+<form asp-controller="Restaurant" asp-action="ProcessAddRestaurantForm" method="post">
+    <div class="form-group">
+        <label asp-for="Name"> Restaurant Name</label>
+        <input asp-for="Name" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Location">Restaurant Location</label>
+        <input asp-for="Location" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CuisineType"> Restaurant Cuisine Type</label>
+        <input asp-for="CuisineType" />
+    </div>
+    <input type="submit" value="Submit" />
+</form>
